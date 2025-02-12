@@ -1,0 +1,4 @@
+namespace: cattle-system
+
+generators:
+ - chartInflator.yaml

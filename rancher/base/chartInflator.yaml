@@ -1,0 +1,15 @@
+apiVersion: builtin
+kind: HelmChartInflationGenerator
+metadata:
+  name: rancher
+name: rancher
+namespace: cattle-system
+version: 2.10.2
+repo: https://releases.rancher.com/server-charts/stable
+releaseName: rancher
+valuesInline:
+  # avoid chartName to get shorter K8s object names
+  fullnameOverride: rancher
+  hostname: rancher.my.org 
+  bootstrapPassword: admin
+valuesMerge: replace
